@@ -82,6 +82,7 @@ export const OverOns = () => {
                       src={member.img} 
                       alt={"Klassieke Fiat 500 specialist: " + member.name} 
                       loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" 
                     />
                   </div>

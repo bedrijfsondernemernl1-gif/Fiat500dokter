@@ -88,9 +88,9 @@ export const Diensten = () => {
           {/* Neutrale donkere overlay met rode tint */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a1210]/60 via-[#2a1616]/60 to-[#1a1210]/80 z-10"></div>
           <img 
-            src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNeQW4J3IX3wvy7pC50v3PuEj9UKpFkqaDFM4B-we9f-tu7dUoRakrUB5eOw9mEdhO9carI2sh-qOhkpWKCSLZuHuFQSrbX2-6x4DDGGSjyrRF5ZpJZIdH61LYjrfNL0mMZCfhH53K3F9d=s1360-w1360-h1020-rw" 
+            src="https://i.ibb.co/H60d55j/image.jpg" 
             alt="Vakman aan de slag met klassieke Fiat 500 restauratie in de werkplaats" 
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center premium-hover"
             style={{ filter: 'brightness(0.5) grayscale(30%) contrast(1.1)' }}
             fetchPriority="high"
           />
@@ -173,7 +173,7 @@ export const Diensten = () => {
                   className="group relative aspect-square overflow-hidden rounded-sm bg-[var(--color-charcoal)] cursor-pointer hover:-translate-y-2 hover:shadow-2xl hover:shadow-[var(--color-accent)]/20 transition-all duration-300"
                   onClick={() => setSelectedImage(item.img)}
                 >
-                  <img src={item.img} alt={item.title + " - hoogwaardige oldtimer onderdelen voor klassieke Fiat 500"} loading="lazy" className="w-full h-full object-cover grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-transform duration-500" />
+                  <img src={item.img} alt={item.title + " - hoogwaardige oldtimer onderdelen voor klassieke Fiat 500"} loading="lazy" decoding="async" className="w-full h-full object-cover grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
                   <div className="absolute bottom-6 left-6">
                     <h4 className="font-subheading uppercase tracking-widest text-sm text-white group-hover:text-[var(--color-accent)] transition-colors">{item.title}</h4>
@@ -213,6 +213,7 @@ export const Diensten = () => {
               onClick={(e) => e.stopPropagation()}
               referrerPolicy="no-referrer"
               loading="lazy"
+              decoding="async"
             />
           </div>
         )}

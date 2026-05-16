@@ -34,7 +34,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'py-3' : 'py-6'} ${scrolled && !isOpen ? 'bg-[var(--color-dark-bg)] shadow-md border-b border-white/5' : 'bg-transparent'}`}>
+      <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'py-3' : 'py-6'} ${scrolled && !isOpen ? 'glass-panel-dark shadow-2xl border-b border-white/10' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center gap-12">
             <Link to="/" className="flex-shrink-0 flex items-center gap-4">
@@ -55,7 +55,7 @@ export const Navbar = () => {
                   <Link 
                     key={link.path}
                     to={link.path} 
-                    className={`font-subheading text-[13px] uppercase tracking-[2px] font-medium transition-colors ${isActive(link.path) ? 'text-[var(--color-accent)] font-bold border-b-2 border-[var(--color-accent)] pb-1' : 'text-white/75 hover:text-white'}`}
+                    className={`font-subheading text-[13px] uppercase tracking-[2px] font-medium transition-colors pb-1 reveal-line ${isActive(link.path) ? 'text-[var(--color-accent)] font-bold' : 'text-white/75 hover:text-white'}`}
                   >
                     {link.name}
                   </Link>

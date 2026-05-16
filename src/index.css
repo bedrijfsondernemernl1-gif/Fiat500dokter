@@ -38,6 +38,11 @@ body {
   overflow-x: hidden;
 }
 
+.content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 1000px;
+}
+
 .bg-texture {
   background-color: transparent;
 }
@@ -112,12 +117,14 @@ section {
 }
 
 .service-card {
-  background: var(--color-charcoal);
+  background: rgba(44, 44, 44, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 16px;
   padding: 3rem 2.5rem;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
 }
@@ -236,4 +243,64 @@ section {
 
 .car-shake {
   animation: shakeCar 0.15s 3s 3;
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-panel-dark {
+  background: rgba(15, 10, 9, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Luxury hover states */
+.premium-hover {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.premium-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  border-color: rgba(212, 164, 76, 0.3);
+}
+
+/* Subtle image zoom */
+.img-zoom-hover {
+  overflow: hidden;
+}
+.img-zoom-hover img {
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.img-zoom-hover:hover img {
+  transform: scale(1.05) !important;
+}
+
+/* Text glow */
+.text-glow {
+  text-shadow: 0 0 20px rgba(212, 164, 76, 0.3);
+}
+
+/* Subtle reveal line */
+.reveal-line {
+  position: relative;
+}
+.reveal-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-accent);
+  transition: width 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.reveal-line:hover::after {
+  width: 100%;
 }

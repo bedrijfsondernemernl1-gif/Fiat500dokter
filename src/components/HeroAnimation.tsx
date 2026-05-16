@@ -127,8 +127,12 @@ export const HeroAnimation = () => {
           <img 
             src="https://i.ibb.co/CsSD4Zfk/Robert-Bedrijfsauto-562x272png.png" 
             alt="De Fiat 500 Dokter Bedrijfsauto"
-            className="w-full object-contain -scale-x-100"
-            fetchPriority="high"
+            className="w-full h-auto object-contain -scale-x-100"
+            width={562}
+            height={272}
+            decoding="async"
+            fetchPriority="low"
+            loading="lazy"
           />
         </div>
       </div>
@@ -154,8 +158,12 @@ export const HeroAnimation = () => {
           <img 
             src="https://i.ibb.co/LDvMTHpg/Fiat-Pech-Rook-png.png" 
             alt="Gestande blauwe Fiat 500"
-            className="w-full object-contain -scale-x-100"
-            fetchPriority="high"
+            className="w-full h-auto object-contain -scale-x-100"
+            width={562}
+            height={272}
+            decoding="async"
+            fetchPriority="low"
+            loading="lazy"
           />
           
           {/* Glans Effect */}

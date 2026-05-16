@@ -184,6 +184,7 @@ export const Home = () => {
               className="absolute inset-0 w-full h-full object-cover object-[center_60%] z-0 brightness-75 grayscale sepia-[.2]"
               referrerPolicy="no-referrer"
               fetchPriority="high"
+              decoding="async"
             />
           </div>
           {/* Gradient fade to seamlessly blend into the hero background below */}
@@ -195,11 +196,12 @@ export const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a1210] via-[#1a1210]/90 to-[#1a1210]/80 z-10 pointer-events-none"></div>
           
           <img 
-            src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHudIWTrC1UL5uesIio1fcEpXQhgpikl3fZ5yYwe0matikApMpvNa2gQT7DRK4IeIxfCmDTSmLuZ3l4Q0UTzw4RMSA9dAUXA7WSAdcKcSti3DO29Jp7K6NpfVUuBStB65VJbLJdL31TovQS=s1360-w1360-h1020-rw" 
+            src="https://i.ibb.co/H60d55j/image.jpg" 
             alt="Vakman aan het werk in onze werkplaats voor professionele Fiat 500 restauratie en onderhoud" 
-            className="w-full h-full object-cover object-center brightness-50 grayscale sepia-[.2]"
+            className="w-full h-full object-cover object-center brightness-50 grayscale sepia-[.2] premium-hover"
             referrerPolicy="no-referrer"
             fetchPriority="high"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-texture z-10 pointer-events-none"></div>
           {/* Seamless transition gradient to next section */}
@@ -220,15 +222,15 @@ export const Home = () => {
               </div>
             <h1 className="mb-6 font-heading text-6xl md:text-8xl uppercase font-bold" style={{ textShadow: '0 4px 40px rgba(0,0,0,0.6)', letterSpacing: '0.03em' }}>
               <span className="text-white">UW KLASSIEKER</span><br/>
-              <span className="text-[var(--color-accent)]">ONZE PASSIE</span>
+              <span className="text-[var(--color-accent)] text-glow">ONZE PASSIE</span>
             </h1>
-            <p className="max-w-[600px] mx-auto mb-12 font-body text-xl" style={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.6 }}>
+            <p className="max-w-[600px] mx-auto mb-12 font-body text-xl font-light tracking-wide" style={{ color: 'rgba(255,255,255,0.85)', lineHeight: 1.7 }}>
               Specialist in reparatie en restauratie van Fiat 500 en 126 oldtimers. Uw klassieker in vertrouwde handen.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20 w-full sm:w-auto">
               <a 
                 href="#contact" 
-                className="btn-shine w-full sm:w-auto px-10 py-4 bg-[var(--color-accent)] hover:bg-[var(--color-accent-hover)] text-[var(--color-dark-bg)] font-subheading text-[16px] uppercase tracking-[1px] font-bold rounded transition-all shadow-md hover:-translate-y-1 text-center"
+                className="btn-shine w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-[var(--color-accent)] to-[#f3d289] text-[#1a1210] font-subheading text-[16px] uppercase tracking-[2px] font-bold rounded transition-all shadow-[0_10px_30px_rgba(212,164,76,0.3)] hover:shadow-[0_15px_40px_rgba(212,164,76,0.5)] hover:-translate-y-1 text-center"
               >
                 Maak een Afspraak
               </a>
@@ -236,7 +238,7 @@ export const Home = () => {
                 href="https://www.fiat500doktershop.nl" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-10 py-4 bg-transparent border border-white/30 hover:border-white hover:bg-white/5 text-white font-subheading text-[16px] uppercase tracking-[1px] font-bold rounded transition-all hover:-translate-y-1 text-center"
+                className="w-full sm:w-auto px-10 py-4 glass-panel hover:bg-white/10 text-white font-subheading text-[16px] uppercase tracking-[2px] font-bold rounded transition-all hover:-translate-y-1 text-center"
               >
                 Bekijk Webshop
               </a>
@@ -291,7 +293,7 @@ export const Home = () => {
         </div>
       </section>
 
-      <section id="ziekenboeg" className="py-24 bg-gradient-to-b from-[#1a1210] to-[#2a1616] text-white relative overflow-hidden">
+      <section id="ziekenboeg" className="py-24 bg-gradient-to-b from-[#1a1210] to-[#2a1616] text-white relative overflow-hidden content-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <SectionHeader title="De Ziekenboeg" />
           <FadeIn>
@@ -332,6 +334,7 @@ export const Home = () => {
                           src={project.image} 
                           alt={"Succesvol project: " + project.name + " - uw specialist in klassieke Fiat 500 in Nederland"} 
                           loading="lazy"
+                          decoding="async"
                           referrerPolicy="no-referrer"
                           className="w-full h-full object-cover transition-transform"
                         />
@@ -352,7 +355,7 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="bg-gradient-to-b from-[#2a1616] to-[var(--color-dark-bg)] text-white relative overflow-hidden">
+      <section className="bg-gradient-to-b from-[#2a1616] to-[var(--color-dark-bg)] text-white relative overflow-hidden content-auto">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-3xl bg-transparent pointer-events-none"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -360,7 +363,7 @@ export const Home = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeIn delay={0.2}>
-              <div className="space-y-6 text-gray-300 leading-relaxed font-body text-lg">
+              <div className="space-y-6 text-gray-300 leading-relaxed font-body text-lg font-light tracking-wide">
                 <p>
                   De Fiat 500 Dokter is ontstaan uit pure passie voor klassieke Italiaanse schoonheid. Wat begon als een uit de hand gelopen hobby, is inmiddels uitgegroeid tot een gespecialiseerde 'kliniek' voor de Fiat 500 en 126.
                 </p>
@@ -368,29 +371,31 @@ export const Home = () => {
                   Jarenlang werkte de oprichter als zelfstandig hovenier en boomverzorger. In de vrije uurtjes werd er met liefde gesleuteld aan oldtimers. Na een carrièreswitch in 2009 werden de rollen omgedraaid: het repareren en restaureren van deze iconische wagentjes werd het beroep, en het groenwerk de hobby.
                 </p>
                 
-                <blockquote className="quote-block my-8 italic text-3xl font-logo text-white">
+                <blockquote className="quote-block my-8 italic text-3xl font-logo text-white tracking-wide shadow-lg relative premium-hover">
                   "Bij de Fiat 500 Dokter wordt elke oldtimer met liefde en vakmanschap behandeld. Het zijn geen auto's, het zijn patiënten die onze beste zorg verdienen."
                 </blockquote>
                 
                 <div className="pt-4">
-                  <Link to="/over-ons" className="inline-block px-8 py-3 border border-[var(--color-accent)] text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-[var(--color-dark-bg)] font-subheading uppercase tracking-widest font-bold rounded transition-all">
-                    Lees ons hele verhaal
+                  <Link to="/over-ons" className="inline-block px-8 py-3 border border-white/20 glass-panel hover:bg-white/10 hover:border-white/50 text-white font-subheading uppercase tracking-[2px] text-sm font-bold rounded transition-all shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_40px_rgba(212,164,76,0.3)] hover:-translate-y-1">
+                    Ontdek Ons Vakmanschap
                   </Link>
                 </div>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.4}>
-              <div className="relative group premium-image-container">
-                <div className="absolute inset-0 bg-[var(--color-primary)]/20 rounded-xl translate-x-4 translate-y-4 transition-transform duration-700 group-hover:translate-x-6 group-hover:translate-y-6"></div>
-                <div className="relative rounded-xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-white/10">
+              <div className="relative group premium-image-container rounded-xl">
+                <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-primary)] to-[var(--color-accent)] opacity-20 rounded-xl translate-x-4 translate-y-4 transition-transform duration-700 group-hover:translate-x-6 group-hover:translate-y-6 blur-md"></div>
+                <div className="relative rounded-xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.5)] border border-white/10 img-zoom-hover">
                   <img 
                     src="https://i.ibb.co/CsSD4Zfk/Robert-Bedrijfsauto-562x272png.png" 
                     alt="Bedrijfsauto van de Fiat 500 Dokter voor levering van oldtimer onderdelen door heel Nederland" 
                     className="w-full h-auto object-cover premium-image-filter"
                     referrerPolicy="no-referrer"
                     loading="lazy"
+                    decoding="async"
                   />
+                  <div className="absolute inset-0 border border-white/10 rounded-xl pointer-events-none"></div>
                 </div>
               </div>
             </FadeIn>
@@ -398,11 +403,12 @@ export const Home = () => {
         </div>
       </section>
 
-      <section id="contact" className="py-24 bg-gradient-to-br from-[var(--color-dark-bg)] via-[var(--color-charcoal)] to-[var(--color-primary-dark)] relative overflow-hidden">
+      <section id="contact" className="py-24 bg-gradient-to-br from-[#0F0A09] via-[#1A1A1A] to-[#0F0A09] relative overflow-hidden content-auto">
+        <div className="absolute inset-0 bg-[url('https://i.ibb.co/H60d55j/image.jpg')] opacity-[0.03] bg-cover bg-center bg-fixed pointer-events-none grayscale"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <SectionHeader title="Contact & Afspraak" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-[var(--color-dark-bg)] rounded-2xl shadow-xl overflow-hidden border border-white/5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 glass-panel-dark rounded-2xl shadow-2xl overflow-hidden border border-white/5">
             
             {/* Contact Info */}
             <div className="bg-[var(--color-dark-bg)] border-l-4 border-[var(--color-primary)] text-white p-10 lg:p-12 relative overflow-hidden">
