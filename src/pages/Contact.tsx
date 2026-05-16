@@ -5,7 +5,29 @@ import { usePageMeta } from '../hooks/usePageMeta';
 import { ContactForm } from '../components/ContactForm';
 
 export const Contact = () => {
-  usePageMeta('Contact', 'Neem contact op met De Fiat 500 Dokter voor een afspraak, reparatie of onderdelen. Wij helpen u graag verder.');
+  usePageMeta({
+    title: 'Contact | Fiat 500 Dokter & Oldtimer Onderdelen',
+    description: 'Neem contact op voor oldtimer restauratie, onderhoud aan uw Fiat 500 of exclusieve Fiat 500 velgenset & velgen. Wij helpen u graag op weg!',
+    keywords: 'fiat 500 onderdelen, fiat 500 velgen, fiat 500 accessoires, fiat 500 oldtimer onderdelen bestellen, contact opnemen voor fiat 500 onderdelen',
+    canonicalPath: '/contact',
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fiat500dokter.nl"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://fiat500dokter.nl/contact"
+        }]
+      }
+    ]
+  });
 
   return (
     <div className="bg-[var(--color-dark-bg)] min-h-screen text-white">

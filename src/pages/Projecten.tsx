@@ -33,7 +33,29 @@ const projects = [
 ];
 
 export const Projecten = () => {
-  usePageMeta('Projecten', 'Bekijk onze patiënten in de ziekenboeg. Van wachtkamer tot ontslagen patiënten, zie de transformatie van de Fiat 500.');
+  usePageMeta({
+    title: 'Onze Fiat 500 Projecten | Oldtimer Auto Restauraties',
+    description: 'Bekijk succesvolle Fiat 500 oldtimer restauratie projecten door de Fiat 500 Dokter. Van roestige oldtimers tot glanzende vintage cars.',
+    keywords: 'vintage car restauratie, fiat 500 project, oldtimer project auto, fiat 500 restauratie projecten bekijken, vintage car restauratie voorbeelden',
+    canonicalPath: '/projecten',
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fiat500dokter.nl"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projecten",
+          "item": "https://fiat500dokter.nl/projecten"
+        }]
+      }
+    ]
+  });
 
   const [filter, setFilter] = useState('wachtkamer');
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
@@ -112,7 +134,7 @@ export const Projecten = () => {
               >
                 <img 
                   src={project.image} 
-                  alt={project.name} 
+                  alt={"Restauratie project: " + project.name + " - door Fiat 500 Dokter"} 
                   className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   loading="lazy"
                 />
@@ -156,7 +178,7 @@ export const Projecten = () => {
               <div className="w-full md:w-2/3 relative group">
                 <img 
                   src={selectedProject.gallery[currentImageIndex]} 
-                  alt={selectedProject.name} 
+                  alt={"Detailweergave van " + selectedProject.name + " tijdens vintage car restauratie"} 
                   loading="lazy"
                   className="w-full h-auto max-h-[70vh] object-contain rounded-sm"
                 />
@@ -187,7 +209,7 @@ export const Projecten = () => {
                       <img 
                         key={i} 
                         src={img} 
-                        alt={`Thumbnail ${i+1}`} 
+                        alt={"Detailfoto " + (i+1) + " van Fiat 500 project " + selectedProject.name} 
                         onClick={() => setCurrentImageIndex(i)}
                         className={`h-20 w-auto object-cover rounded-sm cursor-pointer transition-all ${currentImageIndex === i ? 'border-2 border-[var(--color-accent)] opacity-100' : 'opacity-50 hover:opacity-100'}`} 
                       />

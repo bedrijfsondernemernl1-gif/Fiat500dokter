@@ -5,7 +5,79 @@ import { Link } from 'react-router-dom';
 import { usePageMeta } from '../hooks/usePageMeta';
 
 export const Diensten = () => {
-  usePageMeta('Diensten', 'Ontdek onze diensten: reparaties, restauraties en onderdelen levering voor uw Fiat 500.');
+  usePageMeta({
+    title: 'Onderhoud Fiat 500 & Oldtimer Restauratie Diensten',
+    description: 'Ontdek onze deskundige diensten voor oldtimers: van betrouwbaar onderhoud voor de Fiat 500 tot complete vintage cars reparaties en APK-keuringen.',
+    keywords: 'fiat 500 restauratie, fiat 500 onderhoud, fiat 500 motor revisie, fiat 500 reparatie, wat kost een fiat 500 restauratie, oldtimer onderhoud fiat 500',
+    canonicalPath: '/diensten',
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Fiat500dokter"
+        },
+        "serviceType": ["Oldtimer restauratie", "Onderhoud Fiat 500", "Fiat 500 velgenset montage"],
+        "areaServed": "NL"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fiat500dokter.nl"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Diensten",
+          "item": "https://fiat500dokter.nl/diensten"
+        }]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "Doen jullie ook volledige body-off restauraties voor de Fiat 500?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, wij bieden volledige body-off restauraties aan. De gehele auto wordt gestript, roest wordt verwijderd en de auto wordt in nieuwstaat opgebouwd met originele of hoogwaardige reproductie onderdelen."
+          }
+        }, {
+          "@type": "Question",
+          "name": "Kan ik mijn eigen oldtimer onderdelen meenemen voor onderhoud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In overleg is het mogelijk om zelf onderdelen aan te leveren. We raden echter aan om onderdelen via ons te betrekken om garantie op de passing en kwaliteit te kunnen waarborgen."
+          }
+        }, {
+          "@type": "Question",
+          "name": "Monteren jullie ook Fiat 500 velgensets?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jazeker! We hebben diverse vintage en sportieve velgensets voor de Fiat 500 op voorraad en we kunnen deze direct balanceren en monteren onder uw klassieker."
+          }
+        }, {
+          "@type": "Question",
+          "name": "Hoe lang duurt een reguliere onderhoudsbeurt voor mijn Fiat 500?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Een standaard (kleine of grote) onderhoudsbeurt duurt doorgaans 1 tot 2 werkdagen, mits er geen onverwachte grote reparaties nodig blijken te zijn."
+          }
+        }, {
+          "@type": "Question",
+          "name": "Kan ik tijdens de restauratie langskomen om te kijken?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absoluut, sterker nog, we houden u graag via Whatsapp op de hoogte met foto's en video's en u bent altijd welkom in de kliniek om de voortgang van uw patiënt te bekijken!"
+          }
+        }]
+      }
+    ]
+  });
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
@@ -17,9 +89,10 @@ export const Diensten = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a1210]/60 via-[#2a1616]/60 to-[#1a1210]/80 z-10"></div>
           <img 
             src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNeQW4J3IX3wvy7pC50v3PuEj9UKpFkqaDFM4B-we9f-tu7dUoRakrUB5eOw9mEdhO9carI2sh-qOhkpWKCSLZuHuFQSrbX2-6x4DDGGSjyrRF5ZpJZIdH61LYjrfNL0mMZCfhH53K3F9d=s1360-w1360-h1020-rw" 
-            alt="Fiat 500 Werkplaats" 
+            alt="Vakman aan de slag met klassieke Fiat 500 restauratie in de werkplaats" 
             className="w-full h-full object-cover object-center"
             style={{ filter: 'brightness(0.5) grayscale(30%) contrast(1.1)' }}
+            fetchPriority="high"
           />
         </div>
         <div className="max-w-7xl mx-auto relative z-20 w-full pt-16 text-center">
@@ -65,7 +138,7 @@ export const Diensten = () => {
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 z-10"></div>
                 <img 
                   src="https://i.ibb.co/Ly614vH/44.png" 
-                  alt="Restauratie" 
+                  alt="Complete oldtimer restauratie van een Fiat 500 door specialisten" 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
                 />
               </div>
@@ -100,7 +173,7 @@ export const Diensten = () => {
                   className="group relative aspect-square overflow-hidden rounded-sm bg-[var(--color-charcoal)] cursor-pointer hover:-translate-y-2 hover:shadow-2xl hover:shadow-[var(--color-accent)]/20 transition-all duration-300"
                   onClick={() => setSelectedImage(item.img)}
                 >
-                  <img src={item.img} alt={item.title} loading="lazy" className="w-full h-full object-cover grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-transform duration-500" />
+                  <img src={item.img} alt={item.title + " - hoogwaardige oldtimer onderdelen voor klassieke Fiat 500"} loading="lazy" className="w-full h-full object-cover grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
                   <div className="absolute bottom-6 left-6">
                     <h4 className="font-subheading uppercase tracking-widest text-sm text-white group-hover:text-[var(--color-accent)] transition-colors">{item.title}</h4>
@@ -135,7 +208,7 @@ export const Diensten = () => {
             </button>
             <img 
               src={selectedImage} 
-              alt="Onderdeel vergroot" 
+              alt="Vergrote weergave van authentiek oldtimer onderdeel voor Fiat 500" 
               className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
               onClick={(e) => e.stopPropagation()}
               referrerPolicy="no-referrer"

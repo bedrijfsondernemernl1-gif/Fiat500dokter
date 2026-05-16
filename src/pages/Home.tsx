@@ -55,7 +55,57 @@ export const Home = () => {
 
   const shouldCollapse = isScrolled || animationDone;
 
-  usePageMeta('Home', 'Specialist in reparatie en restauratie van Fiat 500 en 126 oldtimers. Uw klassieker in vertrouwde handen.');
+  usePageMeta({
+    title: 'Fiat 500 Dokter | Oldtimer Restauratie & Onderhoud',
+    description: 'De Fiat 500 Dokter is uw expert voor oldtimer restauratie, onderhoud en vintage cars. Dé specialist voor uw geliefde Fiat 500 klassieker.',
+    keywords: 'fiat 500 oldtimer, fiat 500 specialist, klassieke fiat 500, oldtimer restauratie, fiat 500 oldtimer laten restaureren, specialist in klassieke fiat 500',
+    canonicalPath: '/',
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Fiat500dokter",
+        "image": "https://i.ibb.co/KpBMpnm1/Fiat-Logo-Banner-Links-1.png",
+        "@id": "https://fiat500dokter.nl",
+        "url": "https://fiat500dokter.nl",
+        "telephone": "+31623868661",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Spaceshuttle 14H",
+          "addressLocality": "Amersfoort",
+          "postalCode": "3824 ML",
+          "addressCountry": "NL"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Fiat500dokter",
+        "url": "https://fiat500dokter.nl",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://fiat500dokter.nl/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fiat500dokter.nl"
+        }]
+      }
+    ]
+  });
 
   const [filter, setFilter] = useState('wachtkamer');
   const filteredProjects = projects.filter(p => p.category === filter);
@@ -130,7 +180,7 @@ export const Home = () => {
             
             <img 
               src="https://i.ibb.co/KcFhP7Pb/Gemini-Generated-Image-nhzgi4nhzgi4nhzg.png" 
-              alt="Landschap weg voor animatie"
+              alt="Prachtig landschap voor klassieke Fiat 500 animatie en oldtimer restauratie sfeer"
               className="absolute inset-0 w-full h-full object-cover object-[center_60%] z-0 brightness-75 grayscale sepia-[.2]"
               referrerPolicy="no-referrer"
               fetchPriority="high"
@@ -146,7 +196,7 @@ export const Home = () => {
           
           <img 
             src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHudIWTrC1UL5uesIio1fcEpXQhgpikl3fZ5yYwe0matikApMpvNa2gQT7DRK4IeIxfCmDTSmLuZ3l4Q0UTzw4RMSA9dAUXA7WSAdcKcSti3DO29Jp7K6NpfVUuBStB65VJbLJdL31TovQS=s1360-w1360-h1020-rw" 
-            alt="Fiat 500 Werkplaats" 
+            alt="Vakman aan het werk in onze werkplaats voor professionele Fiat 500 restauratie en onderhoud" 
             className="w-full h-full object-cover object-center brightness-50 grayscale sepia-[.2]"
             referrerPolicy="no-referrer"
             fetchPriority="high"
@@ -280,7 +330,7 @@ export const Home = () => {
                       <div className="w-full aspect-[4/3] overflow-hidden bg-gray-100 relative premium-image-container">
                         <img 
                           src={project.image} 
-                          alt={project.name} 
+                          alt={"Succesvol project: " + project.name + " - uw specialist in klassieke Fiat 500 in Nederland"} 
                           loading="lazy"
                           referrerPolicy="no-referrer"
                           className="w-full h-full object-cover transition-transform"
@@ -336,9 +386,10 @@ export const Home = () => {
                 <div className="relative rounded-xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-white/10">
                   <img 
                     src="https://i.ibb.co/CsSD4Zfk/Robert-Bedrijfsauto-562x272png.png" 
-                    alt="De Fiat 500 Dokter Bedrijfsauto" 
+                    alt="Bedrijfsauto van de Fiat 500 Dokter voor levering van oldtimer onderdelen door heel Nederland" 
                     className="w-full h-auto object-cover premium-image-filter"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -481,7 +532,7 @@ export const Home = () => {
                       className="absolute inset-0 bg-[var(--color-dark-bg)] rounded-xl overflow-hidden shadow-2xl border border-white/10 flex flex-col md:flex-row"
                     >
                        <div className="w-full md:w-2/3 h-1/2 md:h-full relative shrink-0">
-                         <img src={activeProject.image} alt={activeProject.name} className="w-full h-full object-cover" />
+                         <img src={activeProject.image} alt={"Restauratieresultaat van " + activeProject.name + " - door de Fiat 500 Dokter experts"} className="w-full h-full object-cover" />
                        </div>
                        <div className="w-full md:w-1/3 p-6 md:p-8 flex flex-col justify-center">
                          <p className="text-gray-300 leading-relaxed font-body text-base md:text-lg mb-6 line-clamp-4 md:line-clamp-none">

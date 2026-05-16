@@ -3,7 +3,29 @@ import { FadeIn } from '../components/Shared';
 import { usePageMeta } from '../hooks/usePageMeta';
 
 export const OverOns = () => {
-  usePageMeta('Over Ons', 'Leer het team achter De Fiat 500 Dokter kennen. Passie, vakmanschap en een vleugje humor sinds 2009.');
+  usePageMeta({
+    title: 'Over De Fiat 500 Dokter | Uw Oldtimer Auto Expert',
+    description: 'Ontmoet de gepassioneerde vakmensen achter De Fiat 500 Dokter. Al 15+ jaar uw vertrouwde specialist in Fiat 500 oldtimers en klassieke auto\'s.',
+    keywords: 'fiat 500 garage, oldtimer garage, fiat 500 dokter, ervaren fiat 500 garage in nederland, fiat 500 dokter amersfoort',
+    canonicalPath: '/over-ons',
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fiat500dokter.nl"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Over Ons",
+          "item": "https://fiat500dokter.nl/over-ons"
+        }]
+      }
+    ]
+  });
 
   return (
     <div className="bg-[var(--color-dark-bg)] min-h-screen text-white">
@@ -31,9 +53,9 @@ export const OverOns = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-dark-bg)] to-transparent z-10 block lg:hidden"></div>
           <img 
             src="https://i.ibb.co/7dgdXfkV/output.png" 
-            alt="Robert Schelvis" 
-            loading="lazy"
+            alt="Robert Schelvis - passievolle Fiat 500 restauratie expert" 
             className="w-full h-full object-cover grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-1000"
+            fetchPriority="high"
           />
         </div>
       </section>
@@ -58,7 +80,7 @@ export const OverOns = () => {
                   <div className="aspect-square overflow-hidden relative">
                     <img 
                       src={member.img} 
-                      alt={member.name} 
+                      alt={"Klassieke Fiat 500 specialist: " + member.name} 
                       loading="lazy"
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" 
                     />
