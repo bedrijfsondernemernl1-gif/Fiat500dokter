@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, Mail, ShoppingCart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
@@ -87,8 +88,12 @@ export const Footer = () => {
         
         <div className="border-t border-white/10 pt-8 text-center text-xs flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500">
           <p>&copy; 2009 - {new Date().getFullYear()} Fiat 500 Dokter. Alle rechten voorbehouden.</p>
-          <div className="flex gap-4">
-            <img src="https://i.ibb.co/LDvMTHpg/Fiat-Pech-Rook-png.png" alt="Fiat Pech" className="h-6 opacity-30 hover:opacity-100 transition-opacity" referrerPolicy="no-referrer" />
+          <div className="flex items-center gap-8">
+            <Link to="/voorwaarden" className="hover:text-[var(--color-accent)] transition-colors uppercase tracking-widest text-[10px] font-medium opacity-70 hover:opacity-100">Algemene Voorwaarden</Link>
+            <Link to="/cookies" className="hover:text-[var(--color-accent)] transition-colors uppercase tracking-widest text-[10px] font-medium opacity-70 hover:opacity-100">Cookiebeleid</Link>
+            <div className="flex gap-4">
+              <img src="https://i.ibb.co/LDvMTHpg/Fiat-Pech-Rook-png.png" alt="Fiat Pech" className="h-6 opacity-30 hover:opacity-100 transition-opacity" referrerPolicy="no-referrer" />
+            </div>
           </div>
         </div>
       </div>
