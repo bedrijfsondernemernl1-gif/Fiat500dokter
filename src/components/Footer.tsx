@@ -15,6 +15,10 @@ export const Footer = () => {
               alt="Fiat 500 Dokter Logo" 
               className="max-w-[280px] md:max-w-[380px] w-full h-auto opacity-95 group-hover:scale-105 transition-transform duration-700 relative z-10 drop-shadow-md"
               referrerPolicy="no-referrer"
+              loading="lazy"
+              width="380"
+              height="150"
+              decoding="async"
             />
           </div>
         </div>
@@ -29,6 +33,10 @@ export const Footer = () => {
                 alt="Fiat 500 Dokter Logo" 
                 className="h-[40px] w-auto opacity-90"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                width="150"
+                height="40"
+                decoding="async"
               />
               <span className="text-white font-logo font-bold uppercase text-xl tracking-wide hidden sm:block">De Fiat 500 Dokter</span>
             </div>

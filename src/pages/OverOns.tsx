@@ -55,6 +55,9 @@ export const OverOns = () => {
             alt="Robert Schelvis - passievolle Fiat 500 restauratie expert" 
             className="w-full h-full object-cover grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-1000"
             fetchPriority="high"
+            width="800"
+            height="1200"
+            decoding="async"
           />
         </div>
       </section>
@@ -82,6 +85,8 @@ export const OverOns = () => {
                       alt={"Klassieke Fiat 500 specialist: " + member.name} 
                       loading="lazy"
                       decoding="async"
+                      width="400"
+                      height="400"
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" 
                     />
                   </div>

@@ -183,7 +183,10 @@ export const Home = () => {
               alt="Prachtig landschap voor klassieke Fiat 500 animatie en oldtimer restauratie sfeer"
               className="absolute inset-0 w-full h-full object-cover object-[center_60%] z-0 brightness-75 grayscale sepia-[.2]"
               referrerPolicy="no-referrer"
-              fetchPriority="high"
+              fetchPriority="low"
+              loading="lazy"
+              width="1920"
+              height="350"
               decoding="async"
             />
           </div>
@@ -201,6 +204,8 @@ export const Home = () => {
             className="w-full h-full object-cover object-center brightness-50 grayscale sepia-[.2] premium-hover"
             referrerPolicy="no-referrer"
             fetchPriority="high"
+            width="1920"
+            height="1080"
             decoding="async"
           />
           <div className="absolute inset-0 bg-texture z-10 pointer-events-none"></div>
@@ -336,6 +341,8 @@ export const Home = () => {
                           loading="lazy"
                           decoding="async"
                           referrerPolicy="no-referrer"
+                          width="400"
+                          height="300"
                           className="w-full h-full object-cover transition-transform"
                         />
                       </div>
@@ -393,6 +400,8 @@ export const Home = () => {
                     className="w-full h-auto object-cover premium-image-filter"
                     referrerPolicy="no-referrer"
                     loading="lazy"
+                    width="562"
+                    height="272"
                     decoding="async"
                   />
                   <div className="absolute inset-0 border border-white/10 rounded-xl pointer-events-none"></div>

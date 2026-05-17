@@ -93,6 +93,9 @@ export const Diensten = () => {
             className="w-full h-full object-cover object-center premium-hover"
             style={{ filter: 'brightness(0.5) grayscale(30%) contrast(1.1)' }}
             fetchPriority="high"
+            width="1920"
+            height="1080"
+            decoding="async"
           />
         </div>
         <div className="max-w-7xl mx-auto relative z-20 w-full pt-16 text-center">
@@ -140,6 +143,10 @@ export const Diensten = () => {
                   src="https://i.ibb.co/Ly614vH/44.png" 
                   alt="Complete oldtimer restauratie van een Fiat 500 door specialisten" 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                  loading="lazy"
+                  width="800"
+                  height="600"
+                  decoding="async"
                 />
               </div>
             </FadeIn>
@@ -173,7 +180,15 @@ export const Diensten = () => {
                   className="group relative aspect-square overflow-hidden rounded-sm bg-[var(--color-charcoal)] cursor-pointer hover:-translate-y-2 hover:shadow-2xl hover:shadow-[var(--color-accent)]/20 transition-all duration-300"
                   onClick={() => setSelectedImage(item.img)}
                 >
-                  <img src={item.img} alt={item.title + " - hoogwaardige oldtimer onderdelen voor klassieke Fiat 500"} loading="lazy" decoding="async" className="w-full h-full object-cover grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-transform duration-500" />
+                  <img 
+                    src={item.img} 
+                    alt={item.title + " - hoogwaardige oldtimer onderdelen voor klassieke Fiat 500"} 
+                    loading="lazy" 
+                    decoding="async" 
+                    width="220"
+                    height="164"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-transform duration-500" 
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
                   <div className="absolute bottom-6 left-6">
                     <h4 className="font-subheading uppercase tracking-widest text-sm text-white group-hover:text-[var(--color-accent)] transition-colors">{item.title}</h4>
