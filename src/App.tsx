@@ -8,6 +8,7 @@ const Diensten = lazy(() => import('./pages/Diensten').then(module => ({ default
 const Projecten = lazy(() => import('./pages/Projecten').then(module => ({ default: module.Projecten })));
 const OverOns = lazy(() => import('./pages/OverOns').then(module => ({ default: module.OverOns })));
 const Contact = lazy(() => import('./pages/Contact').then(module => ({ default: module.Contact })));
+const NotFound = lazy(() => import('./pages/NotFound').then(module => ({ default: module.NotFound })));
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -33,6 +34,7 @@ export default function App() {
               <Route path="/projecten" element={<Projecten />} />
               <Route path="/over-ons" element={<OverOns />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>

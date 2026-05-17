@@ -214,17 +214,17 @@ export const Home = () => {
         </div>
 
         {/* Text Area: Bottom portion of the hero */}
-        <div className={`relative z-20 flex-1 flex flex-col justify-center items-center py-12 md:py-16 transition-transform duration-[1000ms] ease-[cubic-bezier(0.22,1,0.36,1)] min-h-screen ${shouldCollapse ? 'translate-y-0' : 'translate-y-[250px] md:translate-y-[350px]'}`} style={{ willChange: 'transform' }}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center pt-24 md:pt-32">
+        <div className={`relative z-20 flex-1 flex flex-col justify-start items-center transition-transform duration-[1000ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${shouldCollapse ? 'translate-y-0 pt-32 md:pt-40' : 'translate-y-[250px] md:translate-y-[350px] pt-12 md:pt-16'}`} style={{ willChange: 'transform' }}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
             <FadeIn>
               <div className="inline-flex items-center justify-center px-5 py-2 mb-8 rounded-full text-white font-subheading uppercase tracking-[2px] text-[13px] font-medium" style={{ backgroundColor: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}>
                 Amersfoort <span className="mx-3 opacity-50">•</span> Sinds 2009
               </div>
-            <h1 className="mb-6 font-heading text-6xl md:text-8xl uppercase font-bold" style={{ textShadow: '0 4px 40px rgba(0,0,0,0.6)', letterSpacing: '0.03em' }}>
+            <h1 className="mb-6 font-heading text-7xl md:text-9xl uppercase font-bold" style={{ textShadow: '0 4px 50px rgba(0,0,0,0.7)', letterSpacing: '0.02em', lineHeight: 0.9 }}>
               <span className="text-white">UW KLASSIEKER</span><br/>
               <span className="text-[var(--color-accent)] text-glow">ONZE PASSIE</span>
             </h1>
-            <p className="max-w-[600px] mx-auto mb-12 font-body text-xl font-light tracking-wide" style={{ color: 'rgba(255,255,255,0.85)', lineHeight: 1.7 }}>
+            <p className="max-w-[700px] mx-auto mb-12 font-body text-xl md:text-2xl font-light tracking-wide" style={{ color: 'rgba(255,255,255,0.85)', lineHeight: 1.7 }}>
               Specialist in reparatie en restauratie van Fiat 500 en 126 oldtimers. Uw klassieker in vertrouwde handen.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20 w-full sm:w-auto">

@@ -13,6 +13,23 @@ export const Contact = () => {
     schema: [
       {
         "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "mainEntity": {
+          "@type": "LocalBusiness",
+          "name": "De Fiat 500 Dokter",
+          "email": "fiat500dokter@gmail.com",
+          "telephone": "+31653613489",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Spaceshuttle 14H",
+            "addressLocality": "Amersfoort",
+            "postalCode": "3824 ML",
+            "addressCountry": "NL"
+          }
+        }
+      },
+      {
+        "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [{
           "@type": "ListItem",
@@ -67,13 +84,13 @@ export const Contact = () => {
                   </div>
                 </a>
 
-                <a href="mailto:info@fiat500dokter.nl" className="flex items-start gap-6 group cursor-pointer">
+                <a href="mailto:fiat500dokter@gmail.com" className="flex items-start gap-6 group cursor-pointer">
                   <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[var(--color-accent)] group-hover:text-[var(--color-accent)] transition-colors shrink-0">
                     <Mail size={20} />
                   </div>
                   <div>
                     <h4 className="font-subheading uppercase tracking-widest text-sm text-white mb-2 group-hover:text-[var(--color-accent)] transition-colors">E-mail</h4>
-                    <p className="text-gray-400 font-body font-light group-hover:text-gray-300 transition-colors">info@fiat500dokter.nl</p>
+                    <p className="text-gray-400 font-body font-light group-hover:text-gray-300 transition-colors">fiat500dokter@gmail.com</p>
                   </div>
                 </a>
 

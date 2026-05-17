@@ -48,9 +48,8 @@ export const OverOns = () => {
             </div>
           </FadeIn>
         </div>
-        <div className="w-full lg:w-1/2 relative min-h-[50vh] lg:min-h-full">
+        <div className="hidden lg:block w-full lg:w-1/2 relative lg:min-h-full">
           <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-dark-bg)] to-transparent z-10 hidden lg:block"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-dark-bg)] to-transparent z-10 block lg:hidden"></div>
           <img 
             src="https://i.ibb.co/7dgdXfkV/output.png" 
             alt="Robert Schelvis - passievolle Fiat 500 restauratie expert" 
